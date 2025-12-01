@@ -7,6 +7,8 @@ sysuse auto, clear
 
 
 sysuse auto
+save "$datadir/intermediate/auto", replace
+
 reghdfe price weight, noa
 
 estout using "$results/results.tex", replace ///

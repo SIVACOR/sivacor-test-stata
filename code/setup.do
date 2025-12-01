@@ -1,4 +1,4 @@
-local scenario "B" 
+local scenario "A" 
 * *** Add required packages from SSC to this list ***
 local ssc_packages "reghdfe ftools estout"
 
@@ -69,5 +69,8 @@ di "=========================="
         }
     }
 
+global datadir "$rootdir/data"
+cap mkdir "$datadir"
+cap mkdir "$datadir/intermediate"
 
 di "=== Stata setup completed ==="
