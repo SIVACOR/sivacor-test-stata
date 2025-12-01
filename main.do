@@ -15,4 +15,6 @@ estout using "$results/results.tex", replace ///
     title("Regression Results") ///
     varlabels(_cons "Constant") ///
     starlevels(* 0.10 ** 0.05 *** 0.01) 
+
+command_does_not_exist
     
