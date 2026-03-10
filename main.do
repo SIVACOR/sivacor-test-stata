@@ -5,14 +5,22 @@ cap mkdir "$results"
 
 sysuse auto, clear
 
+// testing python
+python query
+shell python -m venv ~/venv
+shell ~/venv/bin/pip install -r requirements.txt
+set python_exec "~/venv/bin/python"
+python query
 
-sysuse auto
-reghdfe price weight, noa
-
-estout using "$results/results.tex", replace ///
-    cells(b(star fmt(3)) se(par fmt(2))) ///
-    stats(N r2, fmt(0 3) labels("Observations" "R-squared")) ///
-    title("Regression Results") ///
-    varlabels(_cons "Constant") ///
-    starlevels(* 0.10 ** 0.05 *** 0.01) 
-    
+// test loading a module
+python:
+import numpy as np
+import pandas as pd
+end
+// Expected output:
+//. python:
+//----------------------------------------------- python (type end to exit) ----------
+//>>> import numpy as np
+//>>> import pandas as pd
+//>>> end
+//------------------------------------------------------------------------------------
