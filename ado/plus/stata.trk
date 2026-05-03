@@ -1,4 +1,4 @@
-* 00000003
+* 00000004
 *! version 1.0.0
 * Do not erase or edit this file
 * It is used by Stata to track the ado and help
@@ -170,4 +170,31 @@ f m/ms_parse_absvars.ado
 f m/ms_parse_varlist.ado
 f m/ms_parse_vce.ado
 f m/ms_add_comma.ado
+e
+S http://fmwww.bc.edu/repec/bocode/r
+N require.pkg
+D  3 May 2026
+U 4
+d 'REQUIRE': module to ensure that installed packages have a minimum or exact version.
+d 
+d    Use require to help the reproductibility of your research, by
+d ensuring that people that run your code are using    compatible
+d versions of the packages you use (either minimum versions, of
+d exact versions).
+d 
+d KW: programming
+d KW: reproducibility
+d 
+d Requires: Stata version 14
+d 
+d Distribution-Date: 20230921
+d 
+d Author: Sergio Correia, Board of Governors of the Federal Reserve System
+d Support: email sergio.correia@@gmail.com
+d 
+d Author: Matthew P. Seay, Board of Governors of the Federal Reserve System
+d Support: email matt.seay@@frb.gov
+d 
+f r/require.ado
+f r/require.sthlp
 e

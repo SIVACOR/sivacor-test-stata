@@ -1,6 +1,6 @@
 local scenario "B" 
 * *** Add required packages from SSC to this list ***
-local ssc_packages "reghdfe ftools estout"
+local ssc_packages "reghdfe ftools estout require"
 
 /* This works on all OS when running in batch mode, but may not work in interactive mode */
 local pwd : pwd                     // This always captures the current directory
